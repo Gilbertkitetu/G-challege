@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Griffin Challenge</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1 class="logo">Griffin Challenge &#128509</h1>
+    <div class="container">
+        <div class="instructions">
+            <p>Choose a product you want to buy, Enter the number of items of the product you want to buy, Click ADD to add another product</p>
+        </div>
+        <form class="form">
+            <div class="items">
+                <label for="cup">1 Cup</label>
+                <input type="checkbox" id="cup" name="cup">
+            </div>
+            <div class="items">
+                <label for="plate">2 Plate</label>
+                <input type="checkbox" id="plate" name="plate">
+            </div>
+            <div class="items">
+                <label for="spoon">3 Spoon</label>
+                <input type="checkbox" id="spoon" name="spoon">
+            </div>
+            <div class="items">
+                <label for="basin">4 Basin</label>
+                <input type="checkbox" id="basin" name="basin">
+            </div>
+            <div class="items">
+                <label for="flask">5 Thermos Flask</label>
+                <input type="checkbox" id="flask" name="flask">
+            </div>
+            <div class="items">
+                <label for="trouser">6 Trouser</label>
+                <input type="checkbox" id="trouser" name="trouser">
+            </div>
+            <div class="items">
+                <label for="tie">7 Tie</label>
+                <input type="checkbox" id="tie" name="tie">
+            </div>
+            <div class="items">
+                <label for="shirt">8 Shirt</label>
+                <input type="checkbox" id="shirt" name="shirt">
+            </div>
+            <div class="items">
+                <label for="t_shirt">9 T-Shirt</label>
+                <input type="checkbox" id="t_shirt" name="t_shirt">
+            </div>
+            <div class="items">
+                <label for="socks">10 Socks</label>
+                <input type="checkbox" id="socks" name="socks">
+            </div>
+
+            <label>Number of items</label>
+            <input type="text" id="numberOfItems" value="" placeholder="Enter the number of items">
+
+            <label>Price per item</label>
+            <input type="text" id="btn-price">
+
+            <div class="btn-add">
+
+                <button id="btn-add" onclick="getInputValue();">ADD</button>
+            </div>
+
+        </form>
+
+        <div class="show-items">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    padding-top: 20px;
+    margin: 10px;
+    background-clip: border-box;
+    background-color: black;
+    color: rgb(72, 180, 230);
+    font-weight: 10000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+}
+
+.form {
+    width: 700px;
+    height: 300px;
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 20px;
+    float: left;
+}
+
+.instructions {
+    padding: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form input {
+    width: 160px;
+    height: 25px;
+}
+
+.show-items {
+    padding-top: 0px;
+    width: 500px;
+    height: 400px;
+    float: right;
+    background-color: aquamarine;
+}
+
+.items {
+    width: auto;
+    height: 50px;
+    background-color: rgb(137, 217, 223);
+    border: 2px;
+    margin: 2px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
