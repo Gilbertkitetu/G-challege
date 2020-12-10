@@ -18,62 +18,74 @@
         <form class="form">
             <div class="items">
                 <label for="cup">1 Cup</label>
-                <input type="checkbox" id="cup" name="cup">
+                <input type="checkbox" id="cup" name="cup" onchange="handleChange(event)">
             </div>
             <div class="items">
                 <label for="plate">2 Plate</label>
-                <input type="checkbox" id="plate" name="plate">
+                <input type="checkbox" id="plate" name="plate" onchange="handleChange(event)">
             </div>
             <div class="items">
                 <label for="spoon">3 Spoon</label>
-                <input type="checkbox" id="spoon" name="spoon">
+                <input type="checkbox" id="spoon" name="spoon" onchange="handleChange(event)">
             </div>
             <div class="items">
                 <label for="basin">4 Basin</label>
-                <input type="checkbox" id="basin" name="basin">
+                <input type="checkbox" id="basin" name="basin" onchange="handleChange(event)">
             </div>
             <div class="items">
                 <label for="flask">5 Thermos Flask</label>
-                <input type="checkbox" id="flask" name="flask">
+                <input type="checkbox" id="flask" name="flask" onchange="handleChange(event)">
             </div>
             <div class="items">
                 <label for="trouser">6 Trouser</label>
-                <input type="checkbox" id="trouser" name="trouser">
+                <input type="checkbox" id="trouser" name="trouser" onchange="handleChange(event)">
             </div>
             <div class="items">
                 <label for="tie">7 Tie</label>
-                <input type="checkbox" id="tie" name="tie">
+                <input type="checkbox" id="tie" name="tie" onchange="handleChange(event)">
             </div>
             <div class="items">
                 <label for="shirt">8 Shirt</label>
-                <input type="checkbox" id="shirt" name="shirt">
+                <input type="checkbox" id="shirt" name="shirt" onchange="handleChange(event)">
             </div>
             <div class="items">
                 <label for="t_shirt">9 T-Shirt</label>
-                <input type="checkbox" id="t_shirt" name="t_shirt">
+                <input type="checkbox" id="t_shirt" name="t_shirt" onchange="handleChange(event)">
             </div>
             <div class="items">
                 <label for="socks">10 Socks</label>
-                <input type="checkbox" id="socks" name="socks">
+                <input type="checkbox" id="socks" name="socks" onchange="handleChange(event)">
             </div>
 
-            <label>Number of items</label>
-            <input type="text" id="numberOfItems" value="" placeholder="Enter the number of items">
-
-            <label>Price per item</label>
-            <input type="text" id="btn-price">
-
-            <div class="btn-add">
-
-                <button id="btn-add" onclick="getInputValue();">ADD</button>
-            </div>
 
         </form>
 
         <div class="show-items">
 
         </div>
+
+        <!--Popup to show the items-->
+        <div id="pop-up" class="popup">
+            <!--pop up content-->
+            <div class="pop-up-content">
+                <div class="pop-header">
+                    <span class="close-popup" onclick="closePopUp()">&times;</span>
+                    <h2 id="itemName">Show checked item name here</h2>
+                </div>
+                <div class="pop-body">
+                    <p>Price per item</p>
+                    <p>Enter number of items</p>
+                    <input type="text" id="itemsNumber">
+                    <button id="btn-add">ADD</button>
+                    <div class="pop-footer">
+                        <h4>Total</h4>
+                        <h4 id="amountper">500</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- <div class="footer"></div> -->
 
 </body>
 
