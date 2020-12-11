@@ -76,3 +76,26 @@
     color: aliceblue;
     text-align: center;
 }
+
+.pop-up-content {
+    background-color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-popup {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+    color: yellow;
+    text-decoration: none;
+    cursor: pointer;
+}
