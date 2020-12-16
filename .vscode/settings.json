@@ -1,4 +1,5 @@
 {
     "git.ignoreLimitWarning": true,
-    "search-online.search-engine": "Google"
+    "search-online.search-engine": "Google",
+    "liveServer.settings.port": 5501
 }
