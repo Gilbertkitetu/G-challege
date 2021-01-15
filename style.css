@@ -166,21 +166,22 @@
 
 .btn-remove {
     color: white;
-    background-color: #333333;
+    background-color: #c02d2d;
     border: none;
-    border-radius: 3em;
-    -webkit-border-radius: 3em;
-    -moz-border-radius: 3em;
-    -ms-border-radius: 3em;
-    -o-border-radius: 3em;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
     font-weight: bold;
     display: block;
     margin: 40px auto 80px auto;
     font-size: 1.75em;
+    cursor: pointer;
 }
 
 .btn-remove:hover {
-    background-color: #ad9292;
+    background-color: #dd7d7d;
 }
 
 .cart-price-per-item {
@@ -212,4 +213,8 @@
 
 .cart-row:last-child {
     border-bottom: 1px solid black;
+}
+
+.cart-first-row-headers span {
+    padding: 50px;
 }

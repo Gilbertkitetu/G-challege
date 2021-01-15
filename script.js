@@ -65,10 +65,13 @@ function addItemToCart(title, price, imageSrc) {
     <span class="cart-item-title">${title}</span>
 </div>
 <span class="cart-price-per-item">${price}</span>
+
 <div class="cart-item-quantity">
     <input class="cart-quantity-input" type="number" value="1">
+    <span class="total-per-item">$totalPerItem}</span>
     <button class="btn-remove" type="button">REMOVE
     </button>
+    </div>
     `
     cartRow.innerHTML = cartRowContent;
     cartItems.append(cartRow)
@@ -95,18 +98,47 @@ function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0];
     var cartRows = cartItemContainer.getElementsByClassName('cart-row');
     var total = 0;
+    var totalPerItem = 0;
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i];
         var PriceElement = cartRow.getElementsByClassName('cart-price-per-item')[0];
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
+        var totalPerI = cartRow.getElementsByClassName('total-per-item')[0];
         console.log(PriceElement, quantityElement);
         var price = parseFloat(PriceElement.innerText.replace('$', ''));
+        totalPerItem = parseFloat(totalPerI.innerText.replace('$'));
         var quantity = quantityElement.value;
+        if (quantity < 10) {
+            totalPerItem = price * quantity;
+        } else if (quantity >= 10 && quantity < 25) {
+            totalPerItem = price * quantity;
+            var discount1 = quantity * 0.1;
+            totalPerItem = totalPerItem - discount1;
+
+        } else if (quantity >= 25 && quantity < 50) {
+            totalPerItem = price * quantity;
+            var discount2 = quantity * 0.25;
+            totalPerItem = totalPerItem - discount2;
+        } else {
+            totalPerItem = price * quantity;
+            var discount3 = quantity * 0.5;
+            totalPerItem = totalPerItem - discount3;
+        }
+
+
+        console.log(totalPerItem);
+
 
         console.log(price * quantity);
-        total = total + (price * quantity);
+        var withoutDiscountPerItem = 0;
+        withoutDiscountPerItem = withoutDiscountPerItem + (price * quantity);
+
+        total = total + totalPerItem;
 
     }
+    //this totalperitem var has discount
+    //total var is the sum of totalperitem
     total = Math.round(total * 100) / 100;
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + withoutDiscountPerItem;
+    document.getElementsByClassName('cart-total-discounted')[0].innerText = '$' + total;
 }
